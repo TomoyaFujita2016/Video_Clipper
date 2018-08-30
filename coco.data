@@ -1,0 +1,7 @@
+classes= 80
+train  = data/coco/trainvalno5k.txt
+valid  = coco_testdev
+names = darknet_/data/coco.names
+backup = /tmp/backup_yolo/
+eval=coco
+

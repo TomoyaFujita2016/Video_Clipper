@@ -1,0 +1,8 @@
+ffmpeg-python==0.1.16
+more-itertools==4.3.0
+numpy==1.14.5
+scipy==1.1.0
+sk-video==1.1.10
+tqdm==4.25.0
+configparser==3.5.0
+opencv-python==3.4.2.17
