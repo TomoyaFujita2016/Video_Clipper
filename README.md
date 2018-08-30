@@ -6,7 +6,6 @@
 - 動画ファイルの拡張子はmp4がテスト済み
 
 ### Python 前提ライブラリ
-- ffmpeg-python==0.1.16
 - more-itertools==4.3.0
 - numpy==1.14.5
 - scipy==1.1.0
