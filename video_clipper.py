@@ -25,10 +25,14 @@ def read_video(path):
     return skvideo.io.vreader(path)
 
 def get_frame_rate(path):
-    return int(skvideo.io.ffprobe(path)["video"]["@avg_frame_rate"].split("/")[0])
+    part_of_fps = skvideo.io.ffprobe(path)["video"]["@avg_frame_rate"].split("/")
+    return round(int(part_of_fps[0]) / int(part_of_fps[1]))
 
 def get_amount_of_frame(path):
     return int(skvideo.io.ffprobe(path)["video"]["@nb_frames"])
+
+def get_video_info(path):
+    return skvideo.io.ffprobe(path)
 
 def array_to_image(array):
     array = array.transpose(2,0,1)
@@ -176,6 +180,8 @@ def main():
         print("This extention is not allowed.")
         exit()
 
+    video_info = get_video_info(video_path)
+    print(str(video_info))
     config = read_config(CONFIG_PATH)
     print(video_path)
 
