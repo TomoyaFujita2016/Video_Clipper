@@ -44,7 +44,7 @@ class METADATA(Structure):
                 ("names", POINTER(c_char_p))]
 
     
-lib_path = os.path.abspath(os.join(os.path.dirname(__file__), "../libdarknet.so"))
+lib_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../libdarknet.so"))
 lib = CDLL(lib_path, RTLD_GLOBAL)
 #lib = CDLL("libdarknet.so", RTLD_GLOBAL)
 lib.network_width.argtypes = [c_void_p]
